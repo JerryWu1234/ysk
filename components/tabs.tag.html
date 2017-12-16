@@ -1,0 +1,44 @@
+<tabs>
+    <ul class="tabs">
+        <yield/>
+    </ul>
+
+    <script>
+        var children = this.tags
+    </script>
+
+    <style>
+        .tabs {
+            background-color: #CBCBCB;
+            margin-top: 50px;
+        }
+
+        :scope li {
+            font-weight: bold;
+            padding: 10px 0;
+            color: #ffffff;
+            font-size: 10px;
+            display: inline-block;
+            text-align: center;
+            width: 23%;
+        }
+
+        :scope li.active {
+            background-color: #5A5A5A;
+        }
+
+        :scope li.active div {
+            background-color: #5A5A5A;
+            border: 0
+        }
+
+        :scope li div {
+            width: 100%;
+            border-right: 1px solid #747474;
+        }
+
+        :scope li:last-child div {
+            border-right: 0
+        }
+    </style>
+</tabs>

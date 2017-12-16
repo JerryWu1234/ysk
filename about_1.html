@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>足底压力板</title>
+    <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="stylesheet" href="./public/css/app.css">
+    <link rel="stylesheet" href="./lib/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            background: url("./imgs/background_blank.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        .tab {
+            background-color: #CBCBCB;
+            margin-top: 50px;
+        }
+
+        .tab li {
+            font-weight: bold;
+
+            color: #ffffff;
+            font-size: 10px;
+            display: inline-block;
+            text-align: center;
+            width: 23%;
+        }
+
+        .tab li.active {
+            background-color: #5A5A5A;
+        }
+
+        .tab li.active div {
+            background-color: #5A5A5A;
+            border: 0;
+            padding: 10px 0;
+        }
+
+        .tab li div {
+            width: 100%;
+            border-right: 1px solid #747474;
+        }
+        .tab li div a{
+            display: inline-block;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .tab li:last-child div {
+            border-right: 0
+        }
+
+        #left-nav{
+            top:70px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="nav-bar">
+    <span class="fa fa-reorder nav-icon menu-icon"></span>
+    <a href="./index.html">
+        <span class="fa fa-home nav-icon"></span>
+    </a>
+    <span class="fa fa-search nav-icon search-icon"></span>
+</div>
+
+<ul id="left-nav">
+    <li class="left-nav-list">糖尿病足预防</li>
+    <li class="left-nav-list">中老年保护</li>
+    <li class="left-nav-list">3d定制鞋</li>
+    <li class="left-nav-list"><a href="detail_1.html" style="color: #ffffff">压力检测设备</a></li>
+    <li class="left-nav-list">合作学会</li>
+    <li class="left-nav-list">活动中心</li>
+    <li class="left-nav-list">关于我们</li>
+</ul>
+
+<div style="position: relative" id="main">
+<img src="./imgs/detail_1/2-1.png" alt="" style="width: 200px;position: absolute;top:-51px;">
+<ul class="tab">
+    <li class="active">
+        <div>联系我们</div>
+    </li>
+    <li>
+        <div><a href="about_2.html">免责声明</a></div>
+    </li>
+    <li>
+        <div><a href="about_2.html">商务合作</a></div>
+    </li>
+	<li>
+        <div>&nbsp;</div>
+    </li>
+</ul>
+
+
+    <div style="width: 90%;margin: 10px auto">
+
+        <div style="font-size: 0.8em">
+            <p>地址：上海市静安区武宁南路488号2010</p>
+            
+            <p>电话：86-21-52987005</p>
+            
+            <p>传真：86-21-52987007</p>
+            
+            <p>联系人：王恕女士</p>
+            
+            <p>A：Room 2010 , Hitech Plaza , No , 488 , South Wu Ning Road ,Shanghai 200042</p>
+            
+            <p>T:86-21-52987005</p>
+            
+            <p>F:86-21-52987007</p>
+            
+            <p>Contact：Sara Wang , Ms</p>
+        </div>
+
+    </div>
+    <div class="footer" style="display:block;width:100%;background-color: #01BCF1;position:fixed; bottom: 0px;">
+        <div style="text-align: center">
+            <a href='about_1.html'><img src="./imgs/about_us.png" style="width: 50px;" alt=""></a>
+        </div>
+    </div>
+</div>
+<script src="./lib/js/jquery-3.2.1.min.js"></script>
+<script>
+    var $menuIcon = $(".menu-icon"),
+        $leftNav = $("#left-nav"),
+        $main = $("#main")
+
+    $menuIcon.on("touchend", function () {
+        $leftNav.animate({
+            left: "0"
+        });
+        $main.animate({
+            left: "30%"
+        })
+    });
+
+    $(document.body).on("click", function () {
+        if ($leftNav.css("left") !== "0px") return;
+        $leftNav.animate({
+            left: "-30%"
+        });
+        $main.animate({
+            left: "0"
+        })
+    });
+</script>
+</body>
+</html>
