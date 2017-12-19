@@ -1,7 +1,17 @@
 <tab>
-    <li class="{opts.active ? 'active' : ''}">
-        <div>
-            <yield/>
-        </div>
-    </li>
+    <a href="{opts.href||'#'}">
+        <li class={this.klsMap} style="{{width : this.width }}">
+            <div>
+                <yield/>
+            </div>
+        </li>
+    </a>
+    <script>
+        this.klsMap = {active: this.opts.active};
+        this.width = "25%";
+        this.setWidth = function (width) {
+            this.width = width;
+            this.update()
+        };
+    </script>
 </tab>

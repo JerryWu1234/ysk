@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>足底压力板</title>
-    <link rel="stylesheet" href="./public/css/index.css">
     <link rel="stylesheet" href="./public/css/app.css">
     <link rel="stylesheet" href="./lib/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <style>
-
         .main {
             margin-top: 10px;
         }
@@ -18,81 +16,38 @@
             width: 70%;
             margin: 0 auto;
             text-align: center;
-            background: #ffffff;
         }
 
         .main img {
-
             display: block;
-            margin: 20px auto;
-        }
-
-        #left-nav {
-            top: 70px;
+            margin: 40px auto;
         }
     </style>
 </head>
 <body style="background: url('./imgs/background_blank.jpg')">
-<div id="nav-bar">
-    <span class="fa fa-reorder nav-icon menu-icon"></span>
-    <a href="./index.html">
-        <span class="fa fa-home nav-icon"></span>
-    </a>
-    <span class="fa fa-search nav-icon search-icon"></span>
-</div>
 
-<ul id="left-nav">
-    <li class="left-nav-list">糖尿病足预防</li>
-    <li class="left-nav-list">中老年保护</li>
-    <li class="left-nav-list">3d定制鞋</li>
-    <li class="left-nav-list"><a href="detail_1.html" style="color: #ffffff">压力检测设备</a></li>
-    <li class="left-nav-list">合作学会</li>
-    <li class="left-nav-list">活动中心</li>
-    <li class="left-nav-list">关于我们</li>
-</ul>
-
-<div id="main" style="position: relative">
+<nav-bar></nav-bar>
+<left-nav></left-nav>
+<main-layout>
     <img src="./imgs/detail_2/3-0.png" alt="" style="width: 70%">
     <div class="main">
         <div>
-            <a href="./detail_3.html"><img src="./imgs/detail_2/图片5.png" alt=""></a>
+            <a href="./detail_3.html">
+                <img src="./imgs/detail_2/图片5.png" alt="">
+            </a>
             <img src="./imgs/detail_2/图片6.png" alt="">
             <img src="./imgs/detail_2/图片7.png" alt="">
             <img src="./imgs/detail_2/图片8.png" alt="">
             <img src="./imgs/detail_2/图片9.png" alt="" style="width: 200px">
         </div>
     </div>
-</div>
-<div class="footer" style="background-color: #01BCF1;margin-top: 25px">
-    <div style="text-align: center">
-        <a href='about_1.html'><img src="./imgs/about_us.png" style="width: 50px;" alt=""></a>
-    </div>
-</div>
+    <footer></footer>
+</main-layout>
 <script src="./lib/js/jquery-3.2.1.min.js"></script>
-
+<script src="./lib/js/riot.min.js"></script>
+<script src="./dist/riot_components.js"></script>
 <script>
-    var $menuIcon = $(".menu-icon"),
-        $leftNav = $("#left-nav"),
-        $main = $("#main")
-
-    $menuIcon.on("touchend", function () {
-        $leftNav.animate({
-            left: "0"
-        });
-        $main.animate({
-            left: "30%"
-        })
-    });
-
-    $(document.body).on("click", function () {
-        if ($leftNav.css("left") !== "0px") return;
-        $leftNav.animate({
-            left: "-30%"
-        });
-        $main.animate({
-            left: "0"
-        })
-    });
+    riot.mount('*')
 </script>
 </body>
 </html>

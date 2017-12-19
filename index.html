@@ -11,24 +11,16 @@
 <body style="overflow-x:hidden">
 
 <div id="nav--bar">
-    <span class="fa fa-reorder menu-icon nav-icon" target="#left-nav"></span>
+    <span class="fa fa-reorder menu-icon nav-icon"  target="#left-nav"></span>
     <span class="fa fa-search search-icon nav-icon"></span>
-    <div style="width: 50%;margin: 0 auto;margin-top:10px">
+    <div style="width: 50%;margin: 0 auto">
         <img style="width: 100%" src="./imgs/nav-title.png">
     </div>
 </div>
 
-<ul id="left-nav">
-    <li class="left-nav-list">糖尿病足预防</li>
-    <li class="left-nav-list">中老年保护</li>
-    <li class="left-nav-list"><a href="./detail_2.html" style="color: #ffffff">3d定制鞋</a></li>
-    <li class="left-nav-list"><a href="detail_1.html" style="color: #ffffff">压力检测设备</a></li>
-    <li class="left-nav-list">合作学会</li>
-    <li class="left-nav-list">活动中心</li>
-    <li class="left-nav-list">关于我们</li>
-</ul>
+<left-nav></left-nav>
 
-<div style="position: relative" id="main">
+<main-layout>
     <div id="carousel" class="carousel slide" style="position: relative">
         <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -46,24 +38,22 @@
 
         <div style="background-color: #fff" class="carousel-inner" role="listbox">
         </div>
+    </div>
+    <div class="content-warp" style="margin-bottom: 80px;">
+    </div>
 
-    </div>
-    <div class="content-warp">
-    </div>
+    <footer></footer>
+</main-layout>
 
-    <div class="footer" style="background-color: #01BCF1">
-        <div style="text-align: center">
-            <a href='about_1.html'><img src="./imgs/about_us.png" style="width: 50px;" alt=""></a>
-        </div>
-    </div>
-</div>
 
 <script src="./lib/js/jquery-3.2.1.min.js"></script>
 <script src="./lib/js/layer.js"></script>
 <script src="./public/js/template_renderer.js"></script>
-<script src="./public/js/app.js"></script>
 <script src="./lib/js/bootstrap.min.js"></script>
+<script src="./lib/js/riot.min.js"></script>
+<script src="./dist/riot_components.js"></script>
 <script src="./public/js/index.js"></script>
-
+<script>
+</script>
 </body>
 </html>

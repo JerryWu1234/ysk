@@ -11,9 +11,9 @@ function dist() {
     gulp.src(components)
         .pipe(riot())
         .pipe(uglify())
-        .pipe(concat('dist.js'))
+        .pipe(concat('riot_components.js'))
         .pipe(gulp.dest('dist'));
-    console.log("success!")
+    console.log("build success!")
 }
 
 gulp.task('dist', dist);
@@ -23,10 +23,3 @@ gulp.task('dev', function () {
         dist()
     })
 });
-
-// gulp.task('dev', function () {
-//     return gulp.watch(components)
-//         .pipe(riot())
-//         .pipe(uglify)
-//         .pipe(gulp.dest('dist/riot_components.js')
-// });

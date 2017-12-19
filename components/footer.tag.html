@@ -1,7 +1,18 @@
 <footer>
-    <div class="footer" style="background-color: #01BCF1;margin-top: 25px;position:fixed;bottom:0;display:black">
+    <div class="footer" style="{{display: !!opts.fixed ? 'fixed' : 'block' }}">
         <div style="text-align: center">
-            <a href='about_1.html'><img src="./imgs/about_us.png" style="width: 50px;" alt=""></a>
+            <a href='connect.html'><img src="./imgs/about_us.png" style="width: 50px;" alt=""></a>
         </div>
     </div>
+    <style>
+        .footer {
+            padding: 10px 0;
+            background-color: #01BCF1;
+            margin-top: 25px;
+            bottom: 0;
+            width: 100%;
+            position: fixed;
+        }
+    </style>
+
 </footer>

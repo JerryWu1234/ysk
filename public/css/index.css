@@ -3,28 +3,6 @@
     margin: 0;
 }
 
-#left-nav {
-    background-color: #EFEFEF;
-    position: absolute;
-    top: 45px;
-    left: -30%;
-    width: 30%;
-    bottom: 0;
-}
-
-.left-nav-list {
-    margin: 10px auto;
-    list-style: none;
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 5px;
-    background: linear-gradient(to bottom, #97CDE7 5%, #010005);
-    color: #ffffff;
-    font-size: 8px;
-}
-
 .item {
     position: relative;
     margin-bottom: 5px;
@@ -45,6 +23,8 @@
 }
 
 #nav--bar {
+    height: 70px;
+    line-height: 70px;
     overflow: hidden;
     background-color: #01BCF1;
 }
@@ -59,17 +39,8 @@
 
 #nav--bar .nav-icon {
     color: #fff;
-    font-size: 25px;
-    margin: 10px;
-}
-
-.footer {
-    padding: 20px;
-}
-
-.footer .division {
-    font-size: 25px;
-    color: #fff;
+    font-size: 30px;
+    margin: 20px;
 }
 
 .content-warp {

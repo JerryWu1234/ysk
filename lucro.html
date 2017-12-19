@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>糖尿病预防</title>
+    <link rel="stylesheet" href="./public/css/app.css">
+    <link rel="stylesheet" href="./lib/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <style>
+        .contentpage {
+            width: 90%;
+            margin: 0px auto 100px auto;
+        }
+
+        .contentpage img {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .contentpage img:nth-chlid(1) {
+            margin-top: 30px
+        }
+
+        .graph-list {
+            float: left;
+            font-size: 12px;
+            width: 160px;
+            margin: 15px 0 0 10px;
+            line-height: 15px;
+        }
+
+        .graph-list li {
+            padding: 5px;
+        }
+
+        .graph-list li.active {
+            background-color: #EB6502;
+            color: #ffffff;
+        }
+
+        .info-warp {
+            overflow: hidden;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .info-warp > div {
+            float: left;
+        }
+
+        .info-warp .info-img {
+            position: relative;
+            z-index: 2;
+            width: 25%;
+        }
+
+        .info-warp .info-content {
+            width: 75%;
+        }
+
+        .info-img img {
+            width: 90%;
+        }
+
+        .info-title {
+            font-size: 10px;
+        }
+
+        .info-warp .title-bar {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            right: 0;
+            z-index: 1;
+            display: block;
+            height: 20px;
+            color: #fff;
+            background-color: #EB6502;
+            border-radius: 25px;
+        }
+
+        .info-warp .title-bar span {
+            font-size: 16px;
+            margin-left: 25%;
+        }
+
+        .info-warp .info-text {
+            font-size: 10px;
+            margin-top: 18%;
+            margin-left: 5%;
+        }
+    </style>
+</head>
+<body>
+<nav-bar></nav-bar>
+<left-nav></left-nav>
+<main-layout>
+    <img src="./imgs/contentpage/imgtop.png" alt="" style="width: 200px;">
+    <div class="contentpage">
+        <video src="http://www.endonline.org/public/resources/video/test/2.mp4" poster="./imgs/mp4.jpeg"
+               style="width: 100%;" controls="controls" preload="preload">您的浏览器不支持video标签
+        </video>
+
+        <div class="info-warp">
+            <div class="info-img">
+                <img src="./imgs/media_img_2.png"/>
+            </div>
+
+            <div class="info-content">
+                <b class="title-bar">
+                    <span>
+                       临床证据
+                    </span>
+                </b>
+                <p class="info-text">
+                    在海因里希杜杜塞尔多夫海涅大学进行的临床研究结果的证据表明合适的糖尿病鞋可以预防足部溃疡和炎症的复发。在这项研究中，观察了92个高危糖尿病患者和足部溃疡患者愈合后42个月内足部溃疡复发的情况。有些患者穿正常鞋而另一部分则穿Lucro经典糖尿病鞋。</p>
+                <p style="color: #EB6502;font-weight: bold;font-size: 10px;margin-left: 5%">
+                    结果表明，患者穿戴Lucro鞋后在第一年的溃疡复发率减少80%。</p>
+
+            </div>
+        </div>
+
+        <img src="./imgs/contentpage/1_09.png" alt="">
+
+        <div style="position: relative">
+            <div style="width: 100%;overflow: hidden">
+                <img src="./imgs/contentpage/1.png" class="graph" style="width:140px;float:left">
+                <ul style="" class="graph-list">
+                    <li>1.符合人体解剖学的后帮设计.</li>
+                    <li>2.一体化设计的透气纤维衬.</li>
+                    <li>3.减压，围绕着力点的柔性材料设计.</li>
+                    <li>4.超宽的鞋舌,方便穿戴</li>
+                    <li>5.鞋头的柔性设计，为脚趾提供额外的保护.</li>
+                    <li>6.加长的后帮设计，稳定并纠正的脚后跟位置.</li>
+                    <li>7减震，三层柔性材料组成的鞋垫</li>
+                    <li>8针对前后脚的不同行走特点采用不同强度的材料.</li>
+                    <li>9.LUCRO经典.轻巧.运动系列中采用硬质鞋垫.</li>
+                    <li>10 神垫中心加固.</li>
+                    <li>11.通过鞋跟与前掌的联合受力，控制鞋底形变.</li>
+                    <li>12.LUCRO鞋底的压力分布均匀.</li>
+                    <li>13 LUCRO以大数据为基础研发不同的鞋底.</li>
+                </ul>
+            </div>
+            <div id="introduceGraph" style="position: absolute;margin: 0 auto;bottom: 0"></div>
+        </div>
+        <img src="./imgs/contentpage/1_09.jpg">
+    </div>
+
+    <footer></footer>
+</main-layout>
+<script src="./lib/js/jquery-3.2.1.min.js"></script>
+<script src="./lib/js/riot.min.js"></script>
+<script src="./dist/riot_components.js"></script>
+<script src="./lib/js/konva.min.js"></script>
+<script src="./public/js/introduce_graph.js"></script>
+
+<script>
+    riot.mount('*');
+
+    //自动生成的代码 不要修改！
+    //如果需要调整位置 把 preview改成 false 然后调整完 控制台调用save方法 就可以得到这个数据
+    var data = [{"x": 31, "y": 57, "transition": {"bending": 0, "to": {"x": 153, "y": 9}}}, {
+        "x": 52,
+        "y": 59,
+        "transition": {"bending": 0, "to": {"x": 148, "y": 48}}
+    }, {"x": 73, "y": 54, "transition": {"bending": -0, "to": {"x": 150, "y": 75}}}, {
+        "x": 98,
+        "y": 110,
+        "transition": {"bending": 0, "to": {"x": 156, "y": 106}}
+    }, {"x": 121, "y": 118, "transition": {"bending": 0, "to": {"x": 151, "y": 138}}}, {
+        "x": 75,
+        "y": 181,
+        "transition": {"bending": 0, "to": {"x": 147, "y": 175}}
+    }, {"x": 43, "y": 254, "transition": {"bending": 0, "to": {"x": 150, "y": 216}}}, {
+        "x": 89,
+        "y": 268,
+        "transition": {"bending": 0, "to": {"x": 149, "y": 261}}
+    }, {"x": 116, "y": 328, "transition": {"bending": 0, "to": {"x": 148, "y": 296}}}, {
+        "x": 100,
+        "y": 339,
+        "transition": {"bending": -0, "to": {"x": 154, "y": 334}}
+    }, {"x": 121, "y": 375, "transition": {"bending": 0, "to": {"x": 151, "y": 365}}}, {
+        "x": 113,
+        "y": 397,
+        "transition": {"bending": 0, "to": {"x": 151, "y": 408}}
+    }, {"x": 85, "y": 399, "transition": {"bending": 0, "to": {"x": 155, "y": 444}}}];
+
+    var graph = new IntroduceGraph({
+        preview: true,
+        graphheight: $(".graph").height(),
+        graphwidth: 160,
+        renderTo: "introduceGraph",
+        data: data
+    });
+
+    graph.render();
+
+    graph.on("activityClick", function (evt, index) {
+        $(".graph-list").children().removeClass("active");
+        $(".graph-list li:eq(" + ( index) + ")").addClass("active")
+    });
+
+    function save() {
+        console.log(JSON.stringify(graph.data))
+    }
+
+    function push() {
+        graph.data.push({
+            "x": 100,
+            "y": 100,
+            "transition": {"bending": -0.19835235253792174, "to": {"x": 100, "y": 200}}
+        });
+
+        graph.render()
+    }
+</script>
+
+</body>
+</html>

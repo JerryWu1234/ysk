@@ -15,4 +15,5 @@ ul {
 body {
     background: url("./../../imgs/background_blank.jpg") no-repeat;
     background-size: 100%;
+    overflow-x: hidden;
 }

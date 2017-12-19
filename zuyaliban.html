@@ -5,11 +5,8 @@
     <title>足底压力板</title>
     <link rel="stylesheet" href="./public/css/app.css">
     <link rel="stylesheet" href="./lib/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <style>
-
-
-    </style>
 </head>
 <body>
 <nav-bar></nav-bar>
@@ -18,13 +15,11 @@
     <img src="./imgs/detail_1/2-1.png" alt="" style="width: 200px;position: absolute;top:-51px;">
     <tabs>
         <tab active={true}>足部压力板</tab>
-        <tab>足部扫描仪</tab>
+        <tab href="./zusaomiaoyi.html">足部扫描仪</tab>
         <tab>康复仪</tab>
         <tab>背部扫描仪</tab>
     </tabs>
-
-    <div style="width: 90%;margin: 0 auto">
-
+    <div style="width: 90%;margin: 10px auto 100px auto">
         <img src="./imgs/detail_1/图片1.png" alt="" style="width: 100%">
         <p style="font-size: 1em;color: #EA7518;font-weight: bold"> 压力测量板</p>
         <div style="font-size: 1em">
@@ -35,7 +30,8 @@
             为了增加传感器的接触面积和测量行走路线，压力测量板整合了PDM-L (移动)、FDM-1.5 和 FDM-2的数据。
         </div>
         <img src="./imgs/detail_1/图片2.png" alt="" style="width: 100%">
-        <table style="font-size: 0.4em;font-weight: normal;width: 100%;border-collapse: collapse" border="1">
+
+        <table style="font-size: 0.6em;font-weight: normal;width: 100%;" class="table table-bordered table-responsive">
             <thead>
             <tr>
                 <th></th>
@@ -56,6 +52,7 @@
                     货号032115- 319
                 </th>
             </tr>
+            </thead>
 
             <tr>
                 <td>整体（长x宽x高）</td>
@@ -127,12 +124,12 @@
                 <td>USB 2.0</td>
                 <td>USB 2.0/蓝牙</td>
             </tr>
-            </thead>
+
         </table>
         <img src="./imgs/detail_1/图片3.png" alt="" style="width: 100%">
         <img src="./imgs/detail_1/图片4.png" alt="" style="width: 100%">
 
-        <table style="font-size: 0.4em;font-weight: normal;width: 100%;border-collapse: collapse" border="1">
+        <table style="font-size: 0.6em;font-weight: normal;width: 100%;" class="table table-bordered table-responsive">
             <thead>
             <tr>
                 <th></th>
@@ -222,10 +219,10 @@
                 <td>USB 2.0</td>
             </tr>
         </table>
-
     </div>
+    <footer></footer>
+
 </main-layout>
-<footer></footer>
 
 <script src="./lib/js/jquery-3.2.1.min.js"></script>
 <script src="./lib/js/riot.min.js"></script>
